@@ -3,12 +3,12 @@ const datePicker1 = document.querySelector("#date1");
 const datePicker2 = document.querySelector("#date2");
 const result = document.querySelector("#result");
 
-(function setMinDatetime() {
+/* (function setMinDatetime() {
   const now = new Date();
   const currentDateString = now.toISOString().slice(0, -5);
   datePicker1.setAttribute("min", currentDateString);
   datePicker2.setAttribute("min", currentDateString);
-})();
+})(); */
 
 form.onsubmit = submitForm;
 
