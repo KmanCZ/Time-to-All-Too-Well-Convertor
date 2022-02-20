@@ -1,3 +1,10 @@
+//time convertor elements
+const hoursInput = document.querySelector("#hours");
+const minutesInput = document.querySelector("#minutes");
+const secondsInput = document.querySelector("#seconds");
+const timeForm = document.querySelector("#timeForm");
+const timeResult = document.querySelector("#timeResult");
+
 //date convertor elements
 const dateForm = document.querySelector("#dateForm");
 const datePicker1 = document.querySelector("#date1");
