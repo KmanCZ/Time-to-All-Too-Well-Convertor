@@ -1,7 +1,8 @@
-const form = document.querySelector("form");
+//date convertor elements
+const dateForm = document.querySelector("#dateForm");
 const datePicker1 = document.querySelector("#date1");
 const datePicker2 = document.querySelector("#date2");
-const result = document.querySelector("#result");
+const dateResult = document.querySelector("#dateResult");
 
 /* (function setMinDatetime() {
   const now = new Date();
@@ -10,15 +11,15 @@ const result = document.querySelector("#result");
   datePicker2.setAttribute("min", currentDateString);
 })(); */
 
-form.onsubmit = submitForm;
+dateForm.onsubmit = submitDateForm;
 
-function submitForm(e) {
+function submitDateForm(e) {
   e.preventDefault();
 
   const date1 = new Date(datePicker1.value);
   const date2 = new Date(datePicker2.value);
 
-  result.textContent = dateToAtws(date1, date2);
+  dateResult.textContent = dateToAtws(date1, date2);
 }
 
 function dateToAtws(date1, date2) {
