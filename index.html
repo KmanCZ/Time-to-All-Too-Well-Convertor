@@ -40,13 +40,47 @@
         Time to Too Well (10 Minute Version) (Taylor's Version) (From The Vault)
         Convertor
       </h1>
+
+      <section class="card shadow mb-4">
+        <div class="card-header fs-5">
+          Conver time
+        </div>
+        <div class="card-body">
+          <form id="timeForm">
+            <div class="mb-3">
+              <div class="input-group mb-3">
+                <input type="number" class="form-control" placeholder="Hours" value="0" min="0" max="59" step="1" id="hours">
+                <span class="input-group-text">:</span>
+                <input type="number" class="form-control" placeholder="Minutes" value="0" min="0" max="59" step="1" id="minutes">
+                <span class="input-group-text">:</span>
+                <input type="number" class="form-control" placeholder="Seconds" value="0" min="0" step="1" id="seconds">
+              </div>
+            </div>
+
+            <button type="submit" class="btn btn-danger">Convert</button>
+          </form>
+        </div>
+        <div class="fs-3 text-center border-top border-dark">
+          <div>
+            <div class="my-2">
+              Result:
+              <span
+                id="timeResult"
+                class="my-2 border border-dark d-inline-block p-1 px-3"
+                >0</span
+              >
+              atw
+            </div>
+          </div>
+        </div>
+      </section>
       
       <section class="card shadow">
         <div class="card-header fs-5">
           Convert time between dates
         </div>
         <div class="card-body">
-          <form>
+          <form id="dateForm">
             <div class="mb-3">
               <label for="date1" class="form-label">1. Date</label>
               <input type="datetime-local" id="date1" class="form-control" />
@@ -64,7 +98,7 @@
             <div class="my-2">
               Result:
               <span
-                id="result"
+                id="dateResult"
                 class="my-2 border border-dark d-inline-block p-1 px-3"
                 >0</span
               >
