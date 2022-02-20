@@ -11,6 +11,24 @@ const datePicker1 = document.querySelector("#date1");
 const datePicker2 = document.querySelector("#date2");
 const dateResult = document.querySelector("#dateResult");
 
+//time convertor code
+timeForm.onsubmit = submitTimeForm;
+
+function submitTimeForm(e) {
+  e.preventDefault();
+
+  const hours = parseInt(hoursInput.value);
+  const minutes = parseInt(minutesInput.value);
+  const seconds = parseInt(secondsInput.value);
+
+  //converts time to minutes
+  const resultTime = hours * 60 + minutes + seconds / 60;
+  //converts minutes to atws and rounds it to 2 decimals
+  const atws = Math.round((resultTime / 10.22 + Number.EPSILON) * 100) / 100;
+
+  timeResult.textContent = atws;
+}
+
 /* (function setMinDatetime() {
   const now = new Date();
   const currentDateString = now.toISOString().slice(0, -5);
@@ -18,6 +36,7 @@ const dateResult = document.querySelector("#dateResult");
   datePicker2.setAttribute("min", currentDateString);
 })(); */
 
+//date convertor code
 dateForm.onsubmit = submitDateForm;
 
 function submitDateForm(e) {
